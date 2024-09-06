@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/navigationParentFragment"
+        android:name="com.example.penduduk_lanteng.layanan.NavigationParentFragment"
+        android:label="fragment_navigation_parent"
+        tools:layout="@layout/fragment_navigation_parent" >
+        <action
+            android:id="@+id/action_navigationParentFragment_to_tambahFragment"
+            app:destination="@id/tambahFragment" />
+        <action
+            android:id="@+id/action_navigationParentFragment_to_lihatFragment"
+            app:destination="@id/lihatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.penduduk_lanteng.Splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_navigationParentFragment2"
+            app:destination="@id/navigationParentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tambahFragment"
+        android:name="com.example.penduduk_lanteng.layanan.TambahFragment"
+        android:label="fragment_tambah"
+        tools:layout="@layout/fragment_tambah" >
+        <action
+            android:id="@+id/action_tambahFragment_to_navigationParentFragment"
+            app:destination="@id/navigationParentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lihatFragment"
+        android:name="com.example.penduduk_lanteng.layanan.LihatFragment"
+        android:label="fragment_lihat"
+        tools:layout="@layout/fragment_lihat" >
+        <action
+            android:id="@+id/action_lihatFragment_to_data1Fragment"
+            app:destination="@id/data1Fragment" />
+        <action
+            android:id="@+id/action_lihatFragment_to_data2Fragment"
+            app:destination="@id/data2Fragment" />
+        <action
+            android:id="@+id/action_lihatFragment_to_data3Fragment"
+            app:destination="@id/data3Fragment" />
+        <action
+            android:id="@+id/action_lihatFragment_to_data4Fragment"
+            app:destination="@id/data4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/data1Fragment"
+        android:name="com.example.penduduk_lanteng.data.data1.Data1Fragment"
+        android:label="fragment_data1"
+        tools:layout="@layout/fragment_data1" >
+        <action
+            android:id="@+id/action_data1Fragment_to_detail1Fragment"
+            app:destination="@id/detail1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/data2Fragment"
+        android:name="com.example.penduduk_lanteng.data.data2.Data2Fragment"
+        android:label="fragment_data2"
+        tools:layout="@layout/fragment_data1" >
+        <action
+            android:id="@+id/action_data2Fragment_to_detail1Fragment2"
+            app:destination="@id/detail1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/data3Fragment"
+        android:name="com.example.penduduk_lanteng.data.data3.Data3Fragment"
+        android:label="fragment_data3"
+        tools:layout="@layout/fragment_data3" >
+        <action
+            android:id="@+id/action_data3Fragment_to_detail1Fragment2"
+            app:destination="@id/detail1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/data4Fragment"
+        android:name="com.example.penduduk_lanteng.data.data4.Data4Fragment"
+        android:label="fragment_data4"
+        tools:layout="@layout/fragment_data4" >
+        <action
+            android:id="@+id/action_data4Fragment_to_detail1Fragment2"
+            app:destination="@id/detail1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail1Fragment"
+        android:name="com.example.penduduk_lanteng.data.data1.Detail1Fragment"
+        android:label="fragment_detail1"
+        tools:layout="@layout/fragment_detail1" >
+        <action
+            android:id="@+id/action_detail1Fragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.penduduk_lanteng.layanan.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+</navigation>
